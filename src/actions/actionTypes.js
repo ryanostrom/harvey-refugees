@@ -1,2 +1,1 @@
-export const SAVINGS = 'SAVINGS'
-export const SALEPRICE = 'SALEPRICE'
+export const SETCURRENT = 'SETCURRENT'

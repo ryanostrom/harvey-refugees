@@ -1,5 +1,5 @@
-import * as calculatorActions from './calculatorActions'
+import * as locationActions from './locationActions'
 
 export default Object.assign(
-  calculatorActions,
+  locationActions,
 )

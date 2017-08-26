@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 
-import calculator from './calculator'
+import location from './location'
 
 export default combineReducers({
-  calculator
+  location
 });
