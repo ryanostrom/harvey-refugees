@@ -27282,60 +27282,593 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 var initialState = {
   current: null,
   available: [{
-    name: "Delco Center",
-    address: {
-      street: "4601 Pecan Brook Drive",
-      city: "Austin",
-      state: "TX",
-      zip: "78724"
-    },
-    latitude: "30.3175138",
-    longitude: "-97.6627078",
-    area: "Austin"
+    title: "Shelter",
+    Closed: false,
+    Lat: 26.0741286,
+    Long: -97.2098098,
+    Address: "110 W Hickman St",
+    City: "Port Isabel",
+    State: "TX",
+    Name: "Port Isabel Police Department/Municipal Court",
+    Phone: "",
+    AdditionalInfo: "Opening 8/25/2017 12:00a Please bring water, snacks, bedding such as pillows and blankets. No alcohol or firearms allowed. ID is requested.",
+    Website: "http://portisabel-texas.com/cityhall/departments/police-department-2/"
   }, {
-    name: "LBJ High School",
-    address: {
-      street: "7309 Lazy Creek Drive",
-      city: "Austin",
-      state: "TX",
-      zip: "78724"
-    },
-    latitude: "30.3134996",
-    longitude: "-97.658856",
-    area: "Austin"
+    title: "Shelter (elderly only)",
+    Closed: false,
+    Lat: 27.4484225,
+    Long: -97.8654296,
+    Address: "223 N FM 772",
+    City: "Kingsville",
+    State: "TX",
+    Name: "Presbyterian Pan American School",
+    Phone: "",
+    AdditionalInfo: "Shelter for the elderly or disabled",
+    Website: ""
   }, {
-    name: "Smithville Recreation Center",
-    address: {
-      street: "106 Gazley Street",
-      city: "Smithville",
-      state: "TX",
-      zip: "78957"
-    },
-    latitude: "30.0087163",
-    longitude: "-97.1657356",
-    area: "Bastrop"
+    title: "Red Cross Shelter",
+    Closed: false,
+    Lat: 27.42777,
+    Long: -98.83653,
+    Address: "619 Ave F",
+    City: "Bruni",
+    State: "TX",
+    Name: "Bruni High School",
+    Phone: "",
+    AdditionalInfo: "",
+    Website: "http://www.webbcisd.org/HighSchool"
   }, {
-    name: "Bell County Expo Center",
-    address: {
-      street: "301 W Loop 121",
-      city: "Belton",
-      state: "TX",
-      zip: "76513"
-    },
-    latitude: "31.0295651",
-    longitude: "-97.4817594",
-    area: "Belton"
+    title: "Red Cross Shelter",
+    Closed: false,
+    Lat: 27.7290268,
+    Long: -98.0652094,
+    Address: "1050 Cecilia St",
+    City: "Alice",
+    State: "TX",
+    Name: "Knights of Columbus",
+    Phone: "3616645662",
+    AdditionalInfo: "",
+    Website: "https://l.facebook.com/l.php?u=https%3A%2F%2Flocal.yahoo.com%2Finfo-39765852-kc-hall-alice&h=ATOovGJsaJBn9KxWO66z2FtkcslV5ahyYl4WGj_ce-v_sjIc_TtqEu4fOWYiYoKExF_Oz6XC4QJ3-qrJ0ngzonjEDRKJUmQF6hhX1dzqEzW5Hl5QrYxu_BSx3UO_QSHyd4iqZIMu2ln9iE6RE_LVMVZOuw2WWfsrcLvuVaU1PmC9WhUl5NXjIzOxLHamkw_ham9cvv2FgDeLYi_36w"
   }, {
-    name: "Randolph Air Force Base",
-    address: {
-      street: "53 Military Plaza",
-      city: "Universal City",
-      state: "TX",
-      zip: "78148"
-    },
-    latitude: "29.5327561",
-    longitude: "-98.2822675",
-    area: "San Antonio"
+    title: "Red Cross Shelter",
+    Closed: false,
+    Lat: 27.522585,
+    Long: -99.4880214,
+    Address: "2902 Tilden",
+    City: "Laredo",
+    State: "TX",
+    Name: "K Tarver Recreational Center",
+    Phone: "9567953055",
+    AdditionalInfo: "",
+    Website: ""
+  }, {
+    title: "Shelter (TAMU only)",
+    Closed: false,
+    Lat: 27.57127,
+    Long: -99.43445,
+    Address: "5201 Univ Blvd",
+    City: "Laredo",
+    State: "TX",
+    Name: "Texas A&M International University",
+    Phone: "",
+    AdditionalInfo: "Shelter for Texas A&M Students/Staff",
+    Website: ""
+  }, {
+    title: "Red Cross Shelter",
+    Closed: false,
+    Lat: 27.5149211,
+    Long: -99.4598374,
+    Address: "2102 Clarks Crossing Dr",
+    City: "Laredo",
+    State: "TX",
+    Name: "Haynes Health & Wellness Center",
+    Phone: "9567910935",
+    AdditionalInfo: "",
+    Website: ""
+  }, {
+    title: "Shelter",
+    Closed: false,
+    Lat: 28.52429,
+    Long: -99.82205,
+    Address: "539 Industrial Blvd",
+    City: "Carrizo Springs",
+    State: "TX",
+    Name: "Dimmit County Rodeo Arena & Conference Center",
+    Phone: "830-876-4216",
+    AdditionalInfo: "",
+    Website: "https://www.facebook.com/pg/dimmit.rodeoarena.confrencecenter/about/"
+  }, {
+    title: "Shelter",
+    Closed: false,
+    Lat: 29.2120263,
+    Long: -99.7814817,
+    Address: "300 E Main St",
+    City: "Uvalde",
+    State: "TX",
+    Name: "Uvalde Civic Center",
+    Phone: "8302784115",
+    AdditionalInfo: "",
+    Website: "visituvalde.com/civic-center.php"
+  }, {
+    title: "Red Cross Shelter",
+    Closed: false,
+    Lat: 27.8576317,
+    Long: -97.635614,
+    Address: "4001 Wildcat Dr",
+    City: "Corpus Christi",
+    State: "TX",
+    Name: "Calallen High Shool",
+    Phone: "",
+    AdditionalInfo: "",
+    Website: "http://tx.cdh.schoolinsites.com"
+  }, {
+    title: "Red Cross Shelter",
+    Closed: false,
+    Lat: 27.8287679,
+    Long: -97.5761139,
+    Address: "2653 McKenzie Rd",
+    City: "Corpus Christi",
+    State: "TX",
+    Name: "Tuloso-Midway High School",
+    Phone: "",
+    AdditionalInfo: "",
+    Website: "http://tmisd.esc2.net"
+  }, {
+    title: "Salvation Army Shelter",
+    Closed: false,
+    Lat: 27.7812302,
+    Long: -97.4101433,
+    Address: "1802 Buford St",
+    City: "Corpus Christi",
+    State: "TX",
+    Name: "Salvation Army of Corpus Christi",
+    Phone: "3618849497",
+    AdditionalInfo: "",
+    Website: "http://www.salvationarmyusa.org/usn/plugins/gdosCenterSearch?mode=query_2&lat=27.801&lng=-97.396&code=US&query=Corpus%20Christi"
+  }, {
+    title: "Shelter",
+    Closed: false,
+    Lat: 27.733438,
+    Long: -97.373383,
+    Address: "4130 S. Alameda St",
+    City: "Corpus Christi",
+    State: "TX",
+    Name: "Mt Carmel Home",
+    Phone: "3618556243",
+    AdditionalInfo: "",
+    Website: "mtcarmelhome.org"
+  }, {
+    title: "Shelter",
+    Closed: false,
+    Lat: 30.0731978,
+    Long: -99.162249,
+    Address: "610 Methodist Encampment Rd",
+    City: "Kerrville",
+    State: "TX",
+    Name: "Mt Wesley Retreat Center",
+    Phone: "9796763547",
+    AdditionalInfo: "Call 979-676-3547",
+    Website: "https://riotexas.org/mount-wesley/"
+  }, {
+    title: "Red Cross Shelter",
+    Closed: false,
+    Lat: 30.0294414,
+    Long: -99.1301433,
+    Address: "2100 Memorial Blvd",
+    City: "Kerville",
+    State: "TX",
+    Name: "Schreiner University",
+    Phone: "",
+    AdditionalInfo: "",
+    Website: "http://www.schreiner.edu/"
+  }, {
+    title: "Red Cross Shelter",
+    Closed: false,
+    Lat: 30.0858085,
+    Long: -99.1542062,
+    Address: "898 Harper Rd",
+    City: "Kerville",
+    State: "TX",
+    Name: "Kerville Bible Church",
+    Phone: "",
+    AdditionalInfo: "",
+    Website: "http://kerrvillebiblechurch.org/"
+  }, {
+    title: "Shelter",
+    Closed: false,
+    Lat: 28.9705949,
+    Long: -98.4756008,
+    Address: "626 Market St",
+    City: "Pleasanton",
+    State: "TX",
+    Name: "Saint Andrew Catholic Church",
+    Phone: "8305693356",
+    AdditionalInfo: "",
+    Website: ""
+  }, {
+    title: "Red Cross Shelter",
+    Closed: false,
+    Lat: 29.0471567,
+    Long: -98.5655382,
+    Address: "800 Lemming Dr",
+    City: "Poteet",
+    State: "TX",
+    Name: "Poteet High School",
+    Phone: "",
+    AdditionalInfo: "",
+    Website: ""
+  }, {
+    title: "Red Cross Shelter",
+    Closed: false,
+    Lat: 29.0471567,
+    Long: -98.5655382,
+    Address: "800 Lemming Dr",
+    City: "Poteet",
+    State: "TX",
+    Name: "Poteet High School",
+    Phone: "",
+    AdditionalInfo: "",
+    Website: ""
+  }, {
+    title: "Shelter",
+    Closed: false,
+    Lat: 29.3293856,
+    Long: -98.5470499,
+    Address: "1520 Gillette",
+    City: "San Antonio",
+    State: "TX",
+    Name: "Kazen Middle School",
+    Phone: "",
+    AdditionalInfo: "",
+    Website: ""
+  }, {
+    title: "Red Cross Shelter",
+    Closed: false,
+    Lat: 29.3760986,
+    Long: -98.5367093,
+    Address: "1734 Centennial Blvd",
+    City: "San Antonio",
+    State: "TX",
+    Name: "Warehouse",
+    Phone: "",
+    AdditionalInfo: "",
+    Website: ""
+  }, {
+    title: "Shelter",
+    Closed: false,
+    Lat: 29.4270381,
+    Long: -98.4393775,
+    Address: "3201 E Houston St",
+    City: "San Antonio",
+    State: "TX",
+    Name: "Freeman Coliseum",
+    Phone: "12102261177",
+    AdditionalInfo: "",
+    Website: "http://www.freemancoliseum.com/"
+  }, {
+    title: "Evacuee Reception Center",
+    Closed: false,
+    Lat: 29.43398,
+    Long: -98.42927,
+    Address: "201 Gembler Rd",
+    City: "San Antonio",
+    State: "TX",
+    Name: "Bexar County",
+    Phone: "",
+    AdditionalInfo: "Check in here to be directed to an available shelter in Bexar County.",
+    Website: ""
+  }, {
+    title: "Shelter",
+    Closed: false,
+    Lat: 29.4270774,
+    Long: -98.4374485,
+    Address: "1 ATT Cntr Pkwy",
+    City: "San Antonio",
+    State: "TX",
+    Name: "AT&T Center",
+    Phone: "",
+    AdditionalInfo: "6000 Beds",
+    Website: "http://www.attcenter.com/"
+  }, {
+    title: "Shelter",
+    Closed: false,
+    Lat: 29.7242569,
+    Long: -98.1738882,
+    Address: "415 Oak Run Pt",
+    City: "New Braunfels",
+    State: "TX",
+    Name: "Oak Run Middle School",
+    Phone: "",
+    AdditionalInfo: "",
+    Website: "http://schools.nbisd.org/page/orms.homepage"
+  }, {
+    title: "Shelter",
+    Closed: false,
+    Lat: 29.7186623,
+    Long: -98.1494594,
+    Address: "2551 Loop 337",
+    City: "New Braunfels",
+    State: "TX",
+    Name: "New Braunfels High School",
+    Phone: "",
+    AdditionalInfo: "",
+    Website: "http://schools.nbisd.org/page/nbhs.homepage"
+  }, {
+    title: "Shelter",
+    Closed: false,
+    Lat: 29.6931631,
+    Long: -98.1230652,
+    Address: "659S Guenther Av",
+    City: "New Braunfels",
+    State: "TX",
+    Name: "New Braunfels Ninth Grade Center",
+    Phone: "",
+    AdditionalInfo: "",
+    Website: "http://schools.nbisd.org/page/ngc.homepage"
+  }, {
+    title: "Red Cross Shelter",
+    Closed: false,
+    Lat: 29.7050007,
+    Long: -98.0961749,
+    Address: "1275 N. Business 35",
+    City: "New Braunfels",
+    State: "TX",
+    Name: "Church Hill Middle School",
+    Phone: "18302212800",
+    AdditionalInfo: "",
+    Website: "chms.comalisd.org"
+  }, {
+    title: "Shelter",
+    Closed: false,
+    Lat: 29.6552339,
+    Long: -98.1118208,
+    Address: "2620 W Klein Rd",
+    City: "New Braunfels",
+    State: "TX",
+    Name: "Klein Road Elementary School",
+    Phone: "",
+    AdditionalInfo: "",
+    Website: "http://schools.nbisd.org/page/kres.homepage"
+  }, {
+    title: "Red Cross Shelter",
+    Closed: false,
+    Lat: 28.9837632,
+    Long: -97.4999404,
+    Address: "234 N Gohmert St",
+    City: "Yorktown",
+    State: "TX",
+    Name: "St. Paul Lutheran Church",
+    Phone: "3615642135",
+    AdditionalInfo: "",
+    Website: "www.stpaulykt.org"
+  }, {
+    title: "Red Cross Shelter",
+    Closed: false,
+    Lat: 29.0931659,
+    Long: -97.275233,
+    Address: "502 Park Heights",
+    City: "Cuero",
+    State: "TX",
+    Name: "Cuero Intermediate School",
+    Phone: "",
+    AdditionalInfo: "",
+    Website: ""
+  }, {
+    title: "CLOSED - At Capacity",
+    Closed: true,
+    Lat: 28.8138795,
+    Long: -97.0031561,
+    Address: "110 E Red River St",
+    City: "Victoria",
+    State: "TX",
+    Name: "St. Joseph High School Gym",
+    Phone: "13615732446",
+    AdditionalInfo: "CLOSED as of 4pm, August 25, full to capacity. Last resort shelter. Bring your own food / water / bedding / medications",
+    Website: "http://www.stjvictoria.com/"
+  }, {
+    title: "CLOSED - At Capacity",
+    Closed: true,
+    Lat: 28.65122,
+    Long: -96.88962,
+    Address: "200 N. Leonard St",
+    City: "Victoria",
+    State: "TX",
+    Name: "Bloomington Bobcat Dome",
+    Phone: "",
+    AdditionalInfo: "CLOSED as of 4pm, August 25th. Last resort shelter. Bring your own food / water / bedding / medications",
+    Website: ""
+  }, {
+    title: "Evacuation Transport Point",
+    Closed: false,
+    Lat: 28.6364328,
+    Long: -96.6174658,
+    Address: "2300 SH-35",
+    City: "Port Lavaca",
+    State: "TX",
+    Name: "Bauer Communty Center",
+    Phone: "",
+    AdditionalInfo: "",
+    Website: ""
+  }, {
+    title: "First Responder Shelter",
+    Closed: false,
+    Lat: 28.9802012,
+    Long: -95.9917011,
+    Address: "104 7th St",
+    City: "Bay City",
+    State: "TX",
+    Name: "Matagorda Medical Center Rehab/Wellness",
+    Phone: "",
+    AdditionalInfo: "",
+    Website: "matagordaregional.org"
+  }, {
+    title: "Shelter",
+    Closed: false,
+    Lat: 29.177859,
+    Long: -95.4185263,
+    Address: "1900 N Downing St",
+    City: "Angleton",
+    State: "TX",
+    Name: "Angleton School District",
+    Phone: "",
+    AdditionalInfo: "Mandatory evacuation shelter",
+    Website: ""
+  }, {
+    title: "Red Cross Shelter",
+    Closed: false,
+    Lat: 29.7126834,
+    Long: -95.5543458,
+    Address: "9800 Town Park Dr",
+    City: "Houston",
+    State: "TX",
+    Name: "Chinese Community Center",
+    Phone: "",
+    AdditionalInfo: "",
+    Website: "http://www.redcross.org/local/texas/gulf-coast/disaster-response"
+  }, {
+    title: "Shelter (men only)",
+    Closed: false,
+    Lat: 29.7606809,
+    Long: -95.3511562,
+    Address: "1811 Ruiz St",
+    City: "Houston",
+    State: "TX",
+    Name: "Star of Hope",
+    Phone: "17132278900",
+    AdditionalInfo: "Shelter for men",
+    Website: "www.sohmission.org"
+  }, {
+    title: "Red Cross Shelter",
+    Closed: false,
+    Lat: 29.9320132,
+    Long: -95.3600298,
+    Address: "1865 Aldine Bender Rd",
+    City: "Houston",
+    State: "TX",
+    Name: "M. O. Campbell Educational Center",
+    Phone: "",
+    AdditionalInfo: "",
+    Website: "http://www.redcross.org/local/texas/gulf-coast/disaster-response"
+  }, {
+    title: "Red Cross Shelter",
+    Closed: false,
+    Lat: 30.7358803,
+    Long: -95.582833,
+    Address: "455 State Highway 75 N",
+    City: "Huntsville",
+    State: "TX",
+    Name: "Walker County Storm Shelter",
+    Phone: "",
+    AdditionalInfo: "",
+    Website: "http://www.huntsvilletx.gov/facilities/facility/details/Walker-County-Storm-Shelter-29"
+  }, {
+    title: "Shelter",
+    Closed: false,
+    Lat: 29.177859,
+    Long: -95.4185263,
+    Address: "1900 N Downing St",
+    City: "Angleton",
+    State: "TX",
+    Name: "Angleton School District",
+    Phone: "",
+    AdditionalInfo: "Mandatory evacuation shelter",
+    Website: ""
+  }, {
+    title: "Shelter",
+    Closed: false,
+    Lat: 29.3806939,
+    Long: -95.0191112,
+    Address: "601 Delany Rd",
+    City: "La Marque",
+    State: "TX",
+    Name: "Abundant Life Christian Center",
+    Phone: "14099351606",
+    AdditionalInfo: "Opens 8/25/2017 1:30PM",
+    Website: "http://alcc.org/"
+  }, {
+    title: "Evacuation Transport Point",
+    Closed: false,
+    Lat: 29.50485,
+    Long: -94.9877104,
+    Address: "4503 11th St",
+    City: "Bacliff",
+    State: "TX",
+    Name: "Bacliff Community Center",
+    Phone: "",
+    AdditionalInfo: "Bus Pick-Up Location; Galeveston Co; To Shelter in, La Marque",
+    Website: ""
+  }, {
+    title: "Red Cross Shelter",
+    Closed: false,
+    Lat: 29.2873496,
+    Long: -94.7933004,
+    Address: "2222 28th St",
+    City: "Galveston",
+    State: "TX",
+    Name: "McGuire-Dent Recreation Center",
+    Phone: "",
+    AdditionalInfo: "",
+    Website: "http://www.galvestontx.gov/Facilities/Facility/Details/McGuireDent-Recreation-Center-at-Menard--84"
+  }, {
+    title: "Evacuation Transport Point",
+    Closed: false,
+    Lat: 29.4551325,
+    Long: -94.6386898,
+    Address: "930 Noble Carl Dr",
+    City: "Bolivar Peninsula",
+    State: "TX",
+    Name: "Crystal Beach Fire Station",
+    Phone: "",
+    AdditionalInfo: "Bus Pick-Up Location; Galeveston Co; To Shelter in La Marque",
+    Website: ""
+  }, {
+    title: "Red Cross Shelter",
+    Closed: false,
+    Lat: 30.976155,
+    Long: -92.584055,
+    Address: "1006 7th Ave",
+    City: "Glenmora",
+    State: "LA",
+    Name: "Grace Church",
+    Phone: "",
+    AdditionalInfo: "",
+    Website: ""
+  }, {
+    title: "Red Cross Shelter",
+    Closed: false,
+    Lat: 32.6594275,
+    Long: -96.7531065,
+    Address: "7071 Bonnie View Rd",
+    City: "Dallas",
+    State: "TX",
+    Name: "Tommie M Allen Recreation Center",
+    Phone: "",
+    AdditionalInfo: "",
+    Website: ""
+  }, {
+    title: "Shelter",
+    Closed: false,
+    Lat: 32.8808651,
+    Long: -96.8391007,
+    Address: "10011 Midway Rd",
+    City: "Dallas",
+    State: "TX",
+    Name: "City of Dallas - Walnut Hill Rec Center",
+    Phone: "2146707112",
+    AdditionalInfo: "",
+    Website: "http://www.dallasparks.org/Facilities/Facility/Details/Walnut-Hill-Recreation-Center-747"
+  }, {
+    title: "ON STANDBY - Shelter",
+    Closed: true,
+    Lat: 30.3134896,
+    Long: -97.6566618,
+    Address: "7309 Lazy Creek Dr",
+    City: "Austin",
+    State: "TX",
+    Name: "LBJ High School",
+    Phone: "5124142543",
+    AdditionalInfo: "Placed on standby due to lack of need.",
+    Website: "www.austinisd.org/schools/lbj"
   }],
   reservations: [{
     city: "Austin",
@@ -30425,6 +30958,14 @@ var _reactGeolocated = __webpack_require__(341);
 
 var _googleMapsReact = __webpack_require__(343);
 
+var _icon = __webpack_require__(357);
+
+var _icon2 = _interopRequireDefault(_icon);
+
+var _iconClosed = __webpack_require__(358);
+
+var _iconClosed2 = _interopRequireDefault(_iconClosed);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Index = (0, _createReactClass2.default)({
@@ -30628,13 +31169,16 @@ var Index = (0, _createReactClass2.default)({
         'Contact'
       ),
       _react2.default.createElement(
-        'p',
+        'ul',
         null,
-        'Have more information that could make help refugees in the wake of Hurricane Harvey? Contact us at ',
         _react2.default.createElement(
-          'a',
-          { href: 'mailto:info@harveyrefugee.com', target: '_blank' },
-          'info@harveyrefugee.com'
+          'li',
+          null,
+          _react2.default.createElement(
+            'a',
+            { href: 'mailto:info@harveyrefugee.com' },
+            'info@harveyrefugee.com'
+          )
         )
       )
     );
@@ -30664,16 +31208,25 @@ var Index = (0, _createReactClass2.default)({
           centerAroundCurrentLocation: true
         },
         this.props.location.available.map(function (location, key) {
+          var IconPath = location.Closed ? _iconClosed2.default : _icon2.default;
+
           return _react2.default.createElement(_googleMapsReact.Marker, {
             key: key,
-            area: location.area + ' area',
-            street: location.address.street,
-            city: location.address.city,
-            state: location.address.state,
-            zip: location.address.zip,
-            name: location.name,
-            position: { lat: location.latitude, lng: location.longitude },
-            onClick: _this.onMarkerClick
+            title: location.title,
+            closed: location.Closed,
+            address: location.Address,
+            city: location.City,
+            state: location.State,
+            name: location.Name,
+            phone: location.Phone,
+            additionalInfo: location.AdditionalInfo,
+            website: location.Website,
+            position: { lat: location.Lat, lng: location.Long },
+            onClick: _this.onMarkerClick,
+            icon: {
+              url: IconPath,
+              scaledSize: new google.maps.Size(22, 40)
+            }
           });
         }),
         this.renderInfoWindow()
@@ -30681,6 +31234,10 @@ var Index = (0, _createReactClass2.default)({
     );
   },
   renderInfoWindow: function renderInfoWindow() {
+
+    // closed={location.Closed}
+
+    var phone = 'mailto:' + this.state.selectedPlace.phone;
     return _react2.default.createElement(
       _googleMapsReact.InfoWindow,
       {
@@ -30694,13 +31251,60 @@ var Index = (0, _createReactClass2.default)({
         _react2.default.createElement(
           'h5',
           null,
+          this.state.selectedPlace.title
+        ),
+        _react2.default.createElement(
+          'h6',
+          null,
           this.state.selectedPlace.name
         ),
         _react2.default.createElement(
           'div',
           null,
           this.renderAddress()
-        )
+        ),
+        this.state.selectedPlace.phone !== "" ? _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'b',
+            null,
+            'Phone:'
+          ),
+          '\xA0',
+          _react2.default.createElement(
+            'a',
+            { href: phone },
+            this.state.selectedPlace.phone
+          )
+        ) : _react2.default.createElement('div', null),
+        this.state.selectedPlace.website !== "" ? _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'b',
+            null,
+            'Website:'
+          ),
+          '\xA0',
+          _react2.default.createElement(
+            'a',
+            { href: this.state.selectedPlace.website },
+            this.state.selectedPlace.website
+          )
+        ) : _react2.default.createElement('div', null),
+        this.state.selectedPlace.additionalInfo !== "" ? _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'p',
+            null,
+            this.state.selectedPlace.additionalInfo
+          )
+        ) : _react2.default.createElement('div', null)
       )
     );
   },
@@ -30718,23 +31322,21 @@ var Index = (0, _createReactClass2.default)({
     return formattedAddress;
   },
   formatAddress: function formatAddress() {
-    if (!this.state.selectedPlace.street) return;
+    if (!this.state.selectedPlace.address) return;
     return _react2.default.createElement(
       'div',
       null,
       _react2.default.createElement(
         'div',
         null,
-        this.state.selectedPlace.street
+        this.state.selectedPlace.address
       ),
       _react2.default.createElement(
         'div',
         null,
         this.state.selectedPlace.city,
         ', ',
-        this.state.selectedPlace.state,
-        ' ',
-        this.state.selectedPlace.zip
+        this.state.selectedPlace.state
       )
     );
   },
@@ -36126,6 +36728,18 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     };
   };
 });
+
+/***/ }),
+/* 357 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAABQCAMAAABVumeJAAAAw1BMVEUAAADbVFS3ODC7PDC7PDTPQDS7ODC7PDS/PDTPSEDLPDC/QDTHTDy/QDi7PDC/QDi/PDDDRDzLTEC7ODDHQDi/QDSzOCy3ODC3OCzbWEzTQDi7PDDDQDTHSDzLTETjRDzjYFTzRDz7cGT3bGDzUEj3YFT3WEyTMCzraFzfXFT7dGhcFBD3ZFjzSECbODRoHBjvZFj3aFz3XFT3YFh4JCD3XFDzUET3WFDzTECzRED3VEj3VEz7bGDzTET7cGj3ZFzbWFBpL9dHAAAAFnRSTlMAEPvL6zD394McSGhcu7OfdIs441TrpTgbkAAAAu1JREFUOMuNled66jAMQDPZFOiQnJ2wN3S3d7//U13FQLBN1vnFZ58ESZYcTZPRey3zqQnQfDJbPV0ro9c3AAA59MPo9wrVrkWiF/6Ll5PJMnZCjx6wurmqbQLznOVaYBl6AKadE4EBnjNeK4wdD4ybWEaAwWSdwzJgMLpxnXU+4xBle0jun0IchOHV7RjojEtw0OhkB2GxcFxKwKzLAQ3An5TLEx8GJ/ceMR5XECPec9mEYFxJACZ/MeDxVyVHhHsecTCpQcCjbuJKWY+/9/vvWFlcYVPTHsF7ltXFhrOQ9WcPHrWWEsXqsDlzWClxDDWTOc8Cx8wl+yjuOFQPCyV5vxHYSzKzKD/p+YMoH8SdmDIE3IqPbyTEP6VKK3Ioy6Gw9crl179XVFnYSt/cxHh7ZSXLK3GLYqZqCCvbN9F9E3fSapggyYEoB5JMdaYTFJe2i6u7kDYCaKW9MXsVmGX2Ql5H6g2tyZyZRMjjfgvlVYc1T/08U3hxnBd17dTPHcD3WSWfCJ3TDIbV8nkGKUWcv1Qw5+mdx7tKvryYokacvpcyRczurzvwy2Uf7rKLsW2wqMyNmNEWr2dv/lnI3JMuaN0Ct1h2wZI+clS+6byAj6xsF/rgF8ke9JUPULvB3HzXZY22+rnqFgQyRehqN5jg/8zBz85OxKZi37ouM+wcmQYMpz8UKIiWlssDuKrswkO+mzZUJLuR0EAq1FBTCbGBbnPESHSjguxODMD/EPD4kBbRpldfXbkzc6O+ymUR86gRv36f2SHapTIdunuR3dyDlvvJu8i5HSShNzD64kSsoVfIlKJ7kt2K9M5x7DjVUVAcVOrUpSJXRsHrkcrVtUgZgp/KPgxryDZgstslCHYNWbNYlCQRfcjqMAA3SfzShpOKlyR1CseLR9NF86TXktPBLR5UlRG4vnTJVgRdN2QaLkAG7Zqy1gBo1HWpPWo1xuXWK7rhcjOsnR9degCd2rIOoNeWtUb9YlCX5vfnf4xCMelmI3s6AAAAAElFTkSuQmCC"
+
+/***/ }),
+/* 358 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAABQCAYAAABiZJe7AAACx0lEQVRoge2ZQW7aQBSGf5OqWSAEi0pIRgKp3XEfHwIuwE3IIXwVr9klUppgqVIitYqysKXK3fCI7drDzLw39iDnXyFg5n38/v1mPARJksBQewAbAIjj2HQsACCKInp5B2BrMjYwAGaD1mUDrgMsDlqXCfgl4D2AjSvQuk7gSuiRYnynsMD5Cm5OtRvVBtw5LOkSdBNwb7AkFXQduHdYUht0GdgbWFITdLlLFD7BlnXqHgHw4XDrXemR9sCHw966SyKXR7gOd0n7IEkS790lRVGkXOm8lBPgIs9R5LmLqRHsdrtCYqK/7+/49fOx8bP5coWb8ViiDL5ITPLycI88y3A4pq3f+Xp7i2/ff7BrsSOhA3s4psizDC8P99xyPOAizy/Ckgiam20W8OvzkxYs6XBM8fr8xCnJA86zrJMxZX32YdcaFvBkOsN6EWp/f70IMZnOOCWZwKE+LGdMWexIzJcrLZfXixDz5Ypbjr8034zHFZB6X6YfI7WfEN0Pv6Up3v78rrw3mc7YMSBFUSSz+SFNwlAMrk1X2dbuSqeH3ooOCkcwPFDuWVuKhNcul45hzxm+Bpe3QPWm89LlsrtAFdhnl89s9bbmlct1d4H/gX10ucLUtHB44XKTu0Az8BY9Q6v+TWpbmn2IRiODai/Ri8ttUSCpgDuPBvePRagGOpSyps72shOXL0WBpAPsPBo6USDpbuC7iIZWDZMnDicu60aBZALs0mXtuU2f6URdNnUXMAd24bLRnDZPzSIu27gL2AFLumw8l+25BMtlW3cBS+A4jiVctprjKk9+bGUVC04cAAYwMxbWYwcVCcAwFtw4AExgm1hwO8zgIgFoxkIiDoAAsMklllhwBhmJTiUFrMyxVH4BIWCdbAptmIYbic4kCdyYY8n8AoLAqoxK5RcYeCQ60Sewa0kDVzqFdIcAhIGbuoFkhwCAf7SMFl6afn7kAAAAAElFTkSuQmCC"
 
 /***/ })
 /******/ ]);
