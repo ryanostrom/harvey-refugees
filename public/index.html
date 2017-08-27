@@ -3,10 +3,55 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hurricane Harvey Refugees</title>
     <link rel="shortcut icon" href="/favicon.ico">
-    <title>React Widget</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3mU8PA1i7VASUh791MazEp7TODRNZ9sA&libraries=places&v=3"></script>
+    <style>
+      h1, h2, h3, h4, h5 {
+        text-align: center !important;
+      }
+      h1 {
+        margin-top: 32px !important;
+        margin-bottom: 32px !important;
+        color: #333 !important;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 12px;
+      }
+      h2 {
+        color: #555 !important;
+        font-variant: small-caps !important;
+        font-size: 24px !important;
+        margin-bottom: 24px !important;
+        margin-top: 24px !important;
+        background-color: #f9f9f9;
+        padding: 12px 0;
+      }
+      h4 {
+        margin: 24px 0;
+        text-align: left !important;
+      }
+      p {
+        color: #777 !important;
+      },
+    </style>
+    <script>
+      $(document).ready(function() {
+        $("#refugee-centers")
+          .find('h2')
+          .next()
+          .css('left', 0)
+          .css('height', '500px')
+          .css('margin-top', '12px');
+        $("#PlacesAutocomplete__root")
+          .css('z-index', 999);
+      })
+    </script>
   </head>
-  <body>
+  <body style="margin:0 auto; padding: 0 12px; max-width: 650px; ">
     <div id="root"></div>
     <script type="text/javascript" src="bundle.js"></script>
   </body>
