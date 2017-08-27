@@ -30,13 +30,29 @@ let Index = createClass({
       <div>
         <h1>Hurrican Harvey Refugees</h1>
         <ul style={{paddingLeft: 0}}>
+          <a href="#latest-news"><li style={styles.button}><span style={styles.buttonText}>Latest News</span></li></a>
           <a href="#refugee-centers"><li style={styles.button}><span style={styles.buttonText}>Refugee Centers</span></li></a>
           <a href="#lodging"><li style={styles.button}><span style={styles.buttonText}>Lodging</span></li></a>
           <a href="#contact"><li style={styles.button}><span style={styles.buttonText}>Contact</span></li></a>
         </ul>
+        <div id="latest-news">{this.renderAffectedAreas()}</div>
         <div id="refugee-centers" style={styles.refugeeCenters}>{this.renderRefugeeCenters()}</div>
         <div id="lodging">{this.renderLodging()}</div>
         <div id="contact">{this.renderContact()}</div>
+      </div>
+    )
+  },
+
+  renderAffectedAreas() {
+    return (
+      <div>
+        <h2>Latest News</h2>
+        <ul>
+          <li><a target="_blank" href="http://google.org/crisismap/2017-harvey">Google Affected Area Map</a></li>
+          <li><a target="_blank" href="https://weather.com/storms/hurricane/news/hurricane-harvey-texas-impacts?cm_ven=PS_GGL_Harvey_08182017_1&gclid=CjwKCAjwuITNBRBFEiwA9N9YEIthQADVsYQxKq2U9LNzH0jCQ0vH2HVprbaFSMAkXhKi2BUbvlfhBhoC_sYQAvD_BwE">Weather.com Live Updates</a></li>
+          <li><a target="_blank" href="https://www.ready.gov/hurricanes">Hurricane Preparation and Response</a></li>
+          <li><a target="_blank" href="https://twitter.com/RedCross?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Red Cross</a></li>
+        </ul>
       </div>
     )
   },
@@ -71,7 +87,7 @@ let Index = createClass({
     return (
       <div>
         <h2>Contact</h2>
-        <p>Have more information that could make help refugees in the wake of Hurricane Harvey? Contact us at <a href="mailto:rpostrom@gmail.com" target="_blank">rpostrom@gmail.com</a></p>
+        <p>Have more information that could make help refugees in the wake of Hurricane Harvey? Contact us at <a href="mailto:info@harveyrefugee.com" target="_blank">info@harveyrefugee.com</a></p>
       </div>
     )
   },
