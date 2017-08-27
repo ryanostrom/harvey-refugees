@@ -10,6 +10,8 @@ import {
   Marker,
   GoogleApiWrapper,
 } from 'google-maps-react'
+import MapIcon from './icon.png'
+import MapIconClosed from './icon-closed.png'
 
 let Index = createClass({
 
@@ -87,7 +89,7 @@ let Index = createClass({
     return (
       <div>
         <h2>Contact</h2>
-        <p>Have more information that could make help refugees in the wake of Hurricane Harvey? Contact us at <a href="mailto:info@harveyrefugee.com" target="_blank">info@harveyrefugee.com</a></p>
+        <ul><li><a href="mailto:info@harveyrefugee.com">info@harveyrefugee.com</a></li></ul>
       </div>
     )
   },
@@ -108,17 +110,26 @@ let Index = createClass({
           centerAroundCurrentLocation={true}
         >
           {this.props.location.available.map((location, key) => {
+            const IconPath = location.Closed ? MapIconClosed : MapIcon
+
             return (
               <Marker
                 key={key}
-                area={`${location.area} area`}
-                street={location.address.street}
-                city={location.address.city}
-                state={location.address.state}
-                zip={location.address.zip}
-                name={location.name}
-                position={{lat: location.latitude, lng: location.longitude}}
+                title={location.title}
+                closed={location.Closed}
+                address={location.Address}
+                city={location.City}
+                state={location.State}
+                name={location.Name}
+                phone={location.Phone}
+                additionalInfo={location.AdditionalInfo}
+                website={location.Website}
+                position={{lat: location.Lat, lng: location.Long}}
                 onClick={this.onMarkerClick}
+                icon={{
+                  url: IconPath,
+                  scaledSize: new google.maps.Size(22,40)
+                }}
               />
             )
           })}
@@ -129,6 +140,10 @@ let Index = createClass({
   },
 
   renderInfoWindow() {
+
+                // closed={location.Closed}
+
+    const phone = `mailto:${this.state.selectedPlace.phone}`
     return (
       <InfoWindow
         marker={this.state.activeMarker}
@@ -136,8 +151,12 @@ let Index = createClass({
         onClose={this.onInfoWindowClose}
       >
         <div>
-          <h5>{this.state.selectedPlace.name}</h5>
+          <h5>{this.state.selectedPlace.title}</h5>
+          <h6>{this.state.selectedPlace.name}</h6>
           <div>{this.renderAddress()}</div>
+          {this.state.selectedPlace.phone !== "" ? <div><br/><b>Phone:</b>&nbsp;<a href={phone}>{this.state.selectedPlace.phone}</a></div> : <div/>}
+          {this.state.selectedPlace.website !== "" ? <div><br/><b>Website:</b>&nbsp;<a href={this.state.selectedPlace.website}>{this.state.selectedPlace.website}</a></div> : <div/>}
+          {this.state.selectedPlace.additionalInfo !== "" ? <div><br/><p>{this.state.selectedPlace.additionalInfo}</p></div> : <div/>}
         </div>
       </InfoWindow>
     )
@@ -156,11 +175,11 @@ let Index = createClass({
   },
 
   formatAddress() {
-    if (!this.state.selectedPlace.street) return
+    if (!this.state.selectedPlace.address) return
     return (
       <div>
-        <div>{this.state.selectedPlace.street}</div>
-        <div>{this.state.selectedPlace.city}, {this.state.selectedPlace.state} {this.state.selectedPlace.zip}</div>
+        <div>{this.state.selectedPlace.address}</div>
+        <div>{this.state.selectedPlace.city}, {this.state.selectedPlace.state}</div>
       </div>
     )
   },

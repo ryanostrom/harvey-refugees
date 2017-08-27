@@ -15,25 +15,25 @@ module.exports = {
   module: {
     loaders: [
       {
-        test:
-        /\.js$/,
-        loader:
-        'babel-loader',
+        test: /\.js$/,
+        loader: 'babel-loader',
         exclude: /node_modules/,
         query: {
           presets:[ 'es2015', 'react', 'stage-2' ]
         }
       },
       {
-        test:
-        /\.jsx$/,
-        loader:
-        'babel-loader',
+        test: /\.jsx$/,
+        loader: 'babel-loader',
         exclude: /node_modules/,
         query: {
           presets:[ 'es2015', 'react', 'stage-2' ]
         }
-      }
+      },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader?limit=8192'
+      },
     ]
   },
   plugins: [
