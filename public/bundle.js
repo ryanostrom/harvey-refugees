@@ -30981,84 +30981,69 @@ var Index = (0, _createReactClass2.default)({
     };
   },
   render: function render() {
+    // <ul style={{paddingLeft: 0}}>
+    //   <a href="#latest-news"><li style={styles.button}><span style={styles.buttonText}>Resources</span></li></a>
+    //   <a href="#refugee-centers"><li style={styles.button}><span style={styles.buttonText}>Refugee Centers</span></li></a>
+    //   <a href="#lodging"><li style={styles.button}><span style={styles.buttonText}>Lodging</span></li></a>
+    //   <a href="#contact"><li style={styles.button}><span style={styles.buttonText}>Contact</span></li></a>
+    // </ul>
+    // <div id="refugee-centers" style={styles.refugeeCenters}>{this.renderRefugeeCenters()}</div>
+    // <div id="lodging">{this.renderLodging()}</div>
     return _react2.default.createElement(
       'div',
       null,
       _react2.default.createElement(
-        'h1',
+        'div',
         null,
-        'Hurrican Harvey Refugees'
+        _react2.default.createElement(
+          'span',
+          { style: styles.info },
+          'For the latest forecast from the National Hurricane Center, ',
+          _react2.default.createElement(
+            'a',
+            { href: 'http://www.nhc.noaa.gov/refresh/graphics_at4+shtml/152721.shtml?gm_track' },
+            _react2.default.createElement(
+              'b',
+              { style: styles.link },
+              'click here'
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'span',
+          { style: styles.info },
+          'For road closures across Texas, ',
+          _react2.default.createElement(
+            'a',
+            { href: 'http://alerts.drivetexas.org/' },
+            _react2.default.createElement(
+              'b',
+              { style: styles.link },
+              'click here'
+            )
+          ),
+          ' or call 800-452-9292'
+        ),
+        _react2.default.createElement(
+          'span',
+          { style: styles.info },
+          'For roadside assistance, call 800-525-5555'
+        ),
+        _react2.default.createElement(
+          'span',
+          { style: styles.info },
+          'For evacuation information and non-emergency help, dial 2-1-1'
+        )
       ),
       _react2.default.createElement(
-        'ul',
-        { style: { paddingLeft: 0 } },
-        _react2.default.createElement(
-          'a',
-          { href: '#latest-news' },
-          _react2.default.createElement(
-            'li',
-            { style: styles.button },
-            _react2.default.createElement(
-              'span',
-              { style: styles.buttonText },
-              'Latest News'
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'a',
-          { href: '#refugee-centers' },
-          _react2.default.createElement(
-            'li',
-            { style: styles.button },
-            _react2.default.createElement(
-              'span',
-              { style: styles.buttonText },
-              'Refugee Centers'
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'a',
-          { href: '#lodging' },
-          _react2.default.createElement(
-            'li',
-            { style: styles.button },
-            _react2.default.createElement(
-              'span',
-              { style: styles.buttonText },
-              'Lodging'
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'a',
-          { href: '#contact' },
-          _react2.default.createElement(
-            'li',
-            { style: styles.button },
-            _react2.default.createElement(
-              'span',
-              { style: styles.buttonText },
-              'Contact'
-            )
-          )
-        )
+        'h1',
+        null,
+        'Hurrican Harvey Information'
       ),
       _react2.default.createElement(
         'div',
         { id: 'latest-news' },
         this.renderAffectedAreas()
-      ),
-      _react2.default.createElement(
-        'div',
-        { id: 'refugee-centers', style: styles.refugeeCenters },
-        this.renderRefugeeCenters()
-      ),
-      _react2.default.createElement(
-        'div',
-        { id: 'lodging' },
-        this.renderLodging()
       ),
       _react2.default.createElement(
         'div',
@@ -31074,7 +31059,7 @@ var Index = (0, _createReactClass2.default)({
       _react2.default.createElement(
         'h2',
         null,
-        'Latest News'
+        'Resources'
       ),
       _react2.default.createElement(
         'ul',
@@ -31084,8 +31069,44 @@ var Index = (0, _createReactClass2.default)({
           null,
           _react2.default.createElement(
             'a',
+            { target: '_blank', href: 'https://www.facebook.com/safetycheck/hurricane-harvey-aug24-2017/home/' },
+            'Request Help'
+          )
+        ),
+        _react2.default.createElement(
+          'li',
+          null,
+          _react2.default.createElement(
+            'a',
             { target: '_blank', href: 'http://google.org/crisismap/2017-harvey' },
-            'Google Affected Area Map'
+            'Refugee Centers'
+          )
+        ),
+        _react2.default.createElement(
+          'li',
+          null,
+          _react2.default.createElement(
+            'a',
+            { target: '_blank', href: 'https://google.org/publicalerts' },
+            'Public Alerts'
+          )
+        ),
+        _react2.default.createElement(
+          'li',
+          null,
+          _react2.default.createElement(
+            'a',
+            { target: '_blank', href: 'https://www.fema.gov/hurricane-harvey' },
+            'FEMA Latest Updates'
+          )
+        ),
+        _react2.default.createElement(
+          'li',
+          null,
+          _react2.default.createElement(
+            'a',
+            { target: '_blank', href: 'https://www.transportation.gov/hurricane-harvey' },
+            'DOT Resources'
           )
         ),
         _react2.default.createElement(
@@ -31102,8 +31123,8 @@ var Index = (0, _createReactClass2.default)({
           null,
           _react2.default.createElement(
             'a',
-            { target: '_blank', href: 'https://www.ready.gov/hurricanes' },
-            'Hurricane Preparation and Response'
+            { target: '_blank', href: 'https://twitter.com/RedCross?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor' },
+            'Red Cross'
           )
         ),
         _react2.default.createElement(
@@ -31111,8 +31132,26 @@ var Index = (0, _createReactClass2.default)({
           null,
           _react2.default.createElement(
             'a',
-            { target: '_blank', href: 'https://twitter.com/RedCross?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor' },
-            'Red Cross'
+            { target: '_blank', href: 'http://www.texasmonthly.com/the-daily-post/ways-can-help-people-hurricane-harvey/' },
+            'How to Help (Texas Monthly)'
+          )
+        ),
+        _react2.default.createElement(
+          'li',
+          null,
+          _react2.default.createElement(
+            'a',
+            { target: '_blank', href: 'http://www.huffingtonpost.com/entry/how-to-help-hurricane-storm-harvey_us_59a166dde4b0821444c37515' },
+            'How to Help (Huffington Post)'
+          )
+        ),
+        _react2.default.createElement(
+          'li',
+          null,
+          _react2.default.createElement(
+            'a',
+            { target: '_blank', href: 'https://www.ready.gov/hurricanes' },
+            'Hurricane Preparation and Response'
           )
         )
       )
@@ -31387,6 +31426,18 @@ var styles = {
     textAlign: "center",
     fontSize: "12px",
     fontWeight: "300"
+  },
+  info: {
+    width: "100%",
+    margin: "8px 0",
+    backgroundColor: "red",
+    color: "white",
+    padding: "4px 16px",
+    display: "block",
+    borderRadius: 4
+  },
+  link: {
+    color: "black"
   }
 
   // apiKey: "AIzaSyBqyHeRW914QY13R-9FLWOW_SMW4YFcbIo",

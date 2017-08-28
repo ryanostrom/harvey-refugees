@@ -28,18 +28,24 @@ let Index = createClass({
   },
 
   render() {
+        // <ul style={{paddingLeft: 0}}>
+        //   <a href="#latest-news"><li style={styles.button}><span style={styles.buttonText}>Resources</span></li></a>
+        //   <a href="#refugee-centers"><li style={styles.button}><span style={styles.buttonText}>Refugee Centers</span></li></a>
+        //   <a href="#lodging"><li style={styles.button}><span style={styles.buttonText}>Lodging</span></li></a>
+        //   <a href="#contact"><li style={styles.button}><span style={styles.buttonText}>Contact</span></li></a>
+        // </ul>
+        // <div id="refugee-centers" style={styles.refugeeCenters}>{this.renderRefugeeCenters()}</div>
+        // <div id="lodging">{this.renderLodging()}</div>
     return (
       <div>
-        <h1>Hurrican Harvey Refugees</h1>
-        <ul style={{paddingLeft: 0}}>
-          <a href="#latest-news"><li style={styles.button}><span style={styles.buttonText}>Latest News</span></li></a>
-          <a href="#refugee-centers"><li style={styles.button}><span style={styles.buttonText}>Refugee Centers</span></li></a>
-          <a href="#lodging"><li style={styles.button}><span style={styles.buttonText}>Lodging</span></li></a>
-          <a href="#contact"><li style={styles.button}><span style={styles.buttonText}>Contact</span></li></a>
-        </ul>
+        <div>
+          <span style={styles.info}>For the latest forecast from the National Hurricane Center, <a href="http://www.nhc.noaa.gov/refresh/graphics_at4+shtml/152721.shtml?gm_track"><b style={styles.link}>click here</b></a></span>
+          <span style={styles.info}>For road closures across Texas, <a href="http://alerts.drivetexas.org/"><b style={styles.link}>click here</b></a> or call 800-452-9292</span>
+          <span style={styles.info}>For roadside assistance, call 800-525-5555</span>
+          <span style={styles.info}>For evacuation information and non-emergency help, dial 2-1-1</span>
+        </div>
+        <h1>Hurrican Harvey Information</h1>
         <div id="latest-news">{this.renderAffectedAreas()}</div>
-        <div id="refugee-centers" style={styles.refugeeCenters}>{this.renderRefugeeCenters()}</div>
-        <div id="lodging">{this.renderLodging()}</div>
         <div id="contact">{this.renderContact()}</div>
       </div>
     )
@@ -48,12 +54,18 @@ let Index = createClass({
   renderAffectedAreas() {
     return (
       <div>
-        <h2>Latest News</h2>
+        <h2>Resources</h2>
         <ul>
-          <li><a target="_blank" href="http://google.org/crisismap/2017-harvey">Google Affected Area Map</a></li>
+          <li><a target="_blank" href="https://www.facebook.com/safetycheck/hurricane-harvey-aug24-2017/home/">Request Help</a></li>
+          <li><a target="_blank" href="http://google.org/crisismap/2017-harvey">Refugee Centers</a></li>
+          <li><a target="_blank" href="https://google.org/publicalerts">Public Alerts</a></li>
+          <li><a target="_blank" href="https://www.fema.gov/hurricane-harvey">FEMA Latest Updates</a></li>
+          <li><a target="_blank" href="https://www.transportation.gov/hurricane-harvey">DOT Resources</a></li>
           <li><a target="_blank" href="https://weather.com/storms/hurricane/news/hurricane-harvey-texas-impacts?cm_ven=PS_GGL_Harvey_08182017_1&gclid=CjwKCAjwuITNBRBFEiwA9N9YEIthQADVsYQxKq2U9LNzH0jCQ0vH2HVprbaFSMAkXhKi2BUbvlfhBhoC_sYQAvD_BwE">Weather.com Live Updates</a></li>
-          <li><a target="_blank" href="https://www.ready.gov/hurricanes">Hurricane Preparation and Response</a></li>
           <li><a target="_blank" href="https://twitter.com/RedCross?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Red Cross</a></li>
+          <li><a target="_blank" href="http://www.texasmonthly.com/the-daily-post/ways-can-help-people-hurricane-harvey/">How to Help (Texas Monthly)</a></li>
+          <li><a target="_blank" href="http://www.huffingtonpost.com/entry/how-to-help-hurricane-storm-harvey_us_59a166dde4b0821444c37515">How to Help (Huffington Post)</a></li>
+          <li><a target="_blank" href="https://www.ready.gov/hurricanes">Hurricane Preparation and Response</a></li>
         </ul>
       </div>
     )
@@ -235,6 +247,18 @@ const styles = {
     textAlign: "center",
     fontSize: "12px",
     fontWeight: "300"
+  },
+  info: {
+    width: "100%",
+    margin: "8px 0",
+    backgroundColor: "red",
+    color: "white",
+    padding: "4px 16px",
+    display: "block",
+    borderRadius: 4,
+  },
+  link: {
+    color: "black"
   }
 }
 
